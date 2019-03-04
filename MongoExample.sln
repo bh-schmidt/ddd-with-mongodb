@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{9B8C9CC4-834D-4585-92F2-CDBBBDC52E0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{E7E9D5CE-82DC-4989-8232-B92C42AAF0E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{9BCD8D92-1FFF-4731-A136-7603AE080F75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Data", "3.1 - Data", "{D262AA6D-37FF-4097-A649-C294BCB3A70D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{E905B48E-73C2-4F09-BFD4-BBE8B764700C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.Api", "MongoExample.Api\MongoExample.Api.csproj", "{3F544797-F875-4CC6-B9C6-E5934E746944}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.Domain", "MongoExample.Domain\MongoExample.Domain.csproj", "{4E4FD690-AB8F-44D4-B0B1-164E7035EB9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.Data", "MongoExample.Data\MongoExample.Data.csproj", "{847043A1-FB1A-435A-986F-B0F90D595EA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.1 - IoC", "3.2.1 - IoC", "{72C62DAB-EE10-4966-BE0A-55C1EA547AD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.CrossCutting.IoC", "MongoExample.CrossCutting.IoC\MongoExample.CrossCutting.IoC.csproj", "{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.1 - DependencyResolver", "3.2.1 - DependencyResolver", "{D9749E7C-EE61-484B-B7C6-DE6F2308A4B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.CrossCutting.DependencyResolver", "MongoExample.CrossCutting.DependencyResolver\MongoExample.CrossCutting.DependencyResolver.csproj", "{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F544797-F875-4CC6-B9C6-E5934E746944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F544797-F875-4CC6-B9C6-E5934E746944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F544797-F875-4CC6-B9C6-E5934E746944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F544797-F875-4CC6-B9C6-E5934E746944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4FD690-AB8F-44D4-B0B1-164E7035EB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4FD690-AB8F-44D4-B0B1-164E7035EB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4FD690-AB8F-44D4-B0B1-164E7035EB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4FD690-AB8F-44D4-B0B1-164E7035EB9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{847043A1-FB1A-435A-986F-B0F90D595EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847043A1-FB1A-435A-986F-B0F90D595EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847043A1-FB1A-435A-986F-B0F90D595EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847043A1-FB1A-435A-986F-B0F90D595EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D262AA6D-37FF-4097-A649-C294BCB3A70D} = {9BCD8D92-1FFF-4731-A136-7603AE080F75}
+		{E905B48E-73C2-4F09-BFD4-BBE8B764700C} = {9BCD8D92-1FFF-4731-A136-7603AE080F75}
+		{3F544797-F875-4CC6-B9C6-E5934E746944} = {9B8C9CC4-834D-4585-92F2-CDBBBDC52E0B}
+		{4E4FD690-AB8F-44D4-B0B1-164E7035EB9F} = {E7E9D5CE-82DC-4989-8232-B92C42AAF0E8}
+		{847043A1-FB1A-435A-986F-B0F90D595EA9} = {D262AA6D-37FF-4097-A649-C294BCB3A70D}
+		{72C62DAB-EE10-4966-BE0A-55C1EA547AD9} = {E905B48E-73C2-4F09-BFD4-BBE8B764700C}
+		{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45} = {72C62DAB-EE10-4966-BE0A-55C1EA547AD9}
+		{D9749E7C-EE61-484B-B7C6-DE6F2308A4B1} = {E905B48E-73C2-4F09-BFD4-BBE8B764700C}
+		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F} = {D9749E7C-EE61-484B-B7C6-DE6F2308A4B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E2CBF6E-C27E-476A-9C0C-8182FC9786CB}
+	EndGlobalSection
+EndGlobal
