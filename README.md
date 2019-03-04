@@ -1,3 +1,3 @@
-# DDD With MongoDb
+# DDD With MongoDB
 
-Hi this is a simple example of how implement MongoDb in DDD without break the domain layer.
+Hi this is a simple example of how implement MongoDB in DDD without break the domain layer.
