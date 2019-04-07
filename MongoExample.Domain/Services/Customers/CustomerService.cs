@@ -1,10 +1,7 @@
 ﻿using MongoExample.CrossCutting.DependencyResolver;
-using MongoExample.Domain.Entities;
 using MongoExample.Domain.Interfaces.Repository.Customers;
 using MongoExample.Domain.Interfaces.Services.Customers;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using MongoExample.Domain.Models;
 
 namespace MongoExample.Domain.Services.Customers
 {

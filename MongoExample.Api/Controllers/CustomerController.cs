@@ -1,9 +1,8 @@
-﻿using Autofac;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MongoExample.CrossCutting.DependencyResolver;
-using MongoExample.Domain.Entities;
 using MongoExample.Domain.Interfaces.Repository.Customers;
 using MongoExample.Domain.Interfaces.Services.Customers;
+using MongoExample.Domain.Models;
 using System.Collections.Generic;
 
 namespace MongoExample.Api.Controllers

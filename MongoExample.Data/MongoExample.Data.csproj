@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MongoExample.Domain\MongoExample.Domain.csproj" />
+    <ProjectReference Include="..\MongoExample.Infra.CrossCutting.AppSettings\MongoExample.Infra.CrossCutting.AppSettings.csproj" />
   </ItemGroup>
 
 </Project>

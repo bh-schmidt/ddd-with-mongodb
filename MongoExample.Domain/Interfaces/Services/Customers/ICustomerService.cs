@@ -1,7 +1,4 @@
-﻿using MongoExample.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MongoExample.Domain.Models;
 
 namespace MongoExample.Domain.Interfaces.Services.Customers
 {

@@ -1,15 +1,15 @@
 ﻿using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.IdGenerators;
 using MongoDB.Bson.Serialization.Serializers;
-using MongoExample.Domain.Entities;
+using MongoExample.Domain.Models;
 
 namespace MongoExample.Data.Config.Entities
 {
-    public class CustomerConfig
+    public class BaseModelConfig
     {
-        public CustomerConfig()
+        public BaseModelConfig()
         {
-            BsonClassMap.RegisterClassMap<Customer>(cm =>
+            BsonClassMap.RegisterClassMap<BaseModel>(cm =>
             {
                 cm.AutoMap();
                 cm.MapMember(x => x.Id)

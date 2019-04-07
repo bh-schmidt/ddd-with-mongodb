@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28606.126
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{9B8C9CC4-834D-4585-92F2-CDBBBDC52E0B}"
 EndProject
@@ -19,13 +19,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.Domain", "Mong
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.Data", "MongoExample.Data\MongoExample.Data.csproj", "{847043A1-FB1A-435A-986F-B0F90D595EA9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.1 - IoC", "3.2.1 - IoC", "{72C62DAB-EE10-4966-BE0A-55C1EA547AD9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.2 - IoC", "3.2.2 - IoC", "{72C62DAB-EE10-4966-BE0A-55C1EA547AD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.CrossCutting.IoC", "MongoExample.CrossCutting.IoC\MongoExample.CrossCutting.IoC.csproj", "{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.CrossCutting.IoC", "MongoExample.CrossCutting.IoC\MongoExample.CrossCutting.IoC.csproj", "{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.1 - DependencyResolver", "3.2.1 - DependencyResolver", "{D9749E7C-EE61-484B-B7C6-DE6F2308A4B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.CrossCutting.DependencyResolver", "MongoExample.CrossCutting.DependencyResolver\MongoExample.CrossCutting.DependencyResolver.csproj", "{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoExample.CrossCutting.DependencyResolver", "MongoExample.CrossCutting.DependencyResolver\MongoExample.CrossCutting.DependencyResolver.csproj", "{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.3 - AppSettings", "3.2.3 - AppSettings", "{816A13C0-B3C7-45B3-B288-EE6E7CE766A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoExample.Infra.CrossCutting.AppSettings", "MongoExample.Infra.CrossCutting.AppSettings\MongoExample.Infra.CrossCutting.AppSettings.csproj", "{74AFE508-3BFF-4D95-8825-34BF976D9C5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74AFE508-3BFF-4D95-8825-34BF976D9C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74AFE508-3BFF-4D95-8825-34BF976D9C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74AFE508-3BFF-4D95-8825-34BF976D9C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74AFE508-3BFF-4D95-8825-34BF976D9C5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +75,8 @@ Global
 		{0BD29C3F-2E69-4B4D-9EC7-FA2E400AEB45} = {72C62DAB-EE10-4966-BE0A-55C1EA547AD9}
 		{D9749E7C-EE61-484B-B7C6-DE6F2308A4B1} = {E905B48E-73C2-4F09-BFD4-BBE8B764700C}
 		{EAFCE0A3-8BF2-4B6F-BD09-D0661C7B4B3F} = {D9749E7C-EE61-484B-B7C6-DE6F2308A4B1}
+		{816A13C0-B3C7-45B3-B288-EE6E7CE766A5} = {E905B48E-73C2-4F09-BFD4-BBE8B764700C}
+		{74AFE508-3BFF-4D95-8825-34BF976D9C5F} = {816A13C0-B3C7-45B3-B288-EE6E7CE766A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E2CBF6E-C27E-476A-9C0C-8182FC9786CB}
