@@ -1,7 +1,9 @@
 ﻿using MongoDB.Driver;
-using MongoExample.Domain.Interfaces.Repository;
+using MongoExample.Data.Interfaces;
 using MongoExample.Domain.Models;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MongoExample.Data.Repositories
 {
@@ -9,31 +11,68 @@ namespace MongoExample.Data.Repositories
     {
         public BaseCrudRepository(string collectionName) : base(collectionName) { }
 
-        public virtual T Add(T model)
+        public virtual async Task<T> Add(T model)
         {
-            _collection.InsertOne(model);
-            return model;
+            try
+            {
+                await collection.InsertOneAsync(model);
+                return model;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+           
         }
 
-        public virtual void Delete(T model)
+        public virtual async Task Delete(T model)
         {
-            _collection.DeleteOne(c => c.Id == model.Id);
+            try
+            {
+                await collection.DeleteOneAsync(c => c.Id == model.Id);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
-        public virtual List<T> GetAll()
+        public virtual async Task<List<T>> GetAll()
         {
-            var res = _collection.Find(x => true);
-            return res.ToList();
+            try
+            {
+                var values = await collection.FindAsync(x => true);
+                return await values.ToListAsync();
+            }
+            catch (System.Exception e)
+            {
+                throw e;
+            }
         }
 
-        public virtual T GetById(string id)
+        public virtual async Task<T> GetBy(string id)
         {
-            return _collection.Find(c => c.Id == id).FirstOrDefault();
+            try
+            {
+                var values = await collection.FindAsync(c => c.Id == id);
+                return await values.FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
-        public virtual void Update(T customer)
+        public virtual async Task Update(T customer)
         {
-            _collection.ReplaceOne(c => c.Id == customer.Id, customer);
+            try
+            {
+                await collection.ReplaceOneAsync(c => c.Id == customer.Id, customer);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

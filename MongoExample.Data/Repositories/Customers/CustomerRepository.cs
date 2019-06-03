@@ -1,8 +1,6 @@
-﻿using MongoDB.Driver;
-using MongoExample.Domain.Interfaces.Repository.Customers;
-using MongoExample.Domain.Models;
+﻿using MongoExample.Data.Interfaces.Customers;
+using MongoExample.Domain.Models.Customers;
 using MongoExample.Infra.CrossCutting.AppSettings;
-using System.Collections.Generic;
 
 namespace MongoExample.Data.Repositories.Customers
 {

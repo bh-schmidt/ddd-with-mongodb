@@ -15,6 +15,8 @@ namespace MongoExample.Data.Config.Entities
                 cm.MapMember(x => x.Id)
                     .SetSerializer(new StringSerializer(MongoDB.Bson.BsonType.ObjectId))
                     .SetIdGenerator(StringObjectIdGenerator.Instance);
+                cm.SetIgnoreExtraElements(true);
+                cm.SetIgnoreExtraElementsIsInherited(true);
             });
         }
     }

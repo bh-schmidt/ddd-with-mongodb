@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using MongoExample.Domain.Interfaces.Services.Customers;
+using MongoExample.Domain.Interfaces.Customers;
 using MongoExample.Domain.Services.Customers;
 
 namespace MongoExample.CrossCutting.IoC.Modules

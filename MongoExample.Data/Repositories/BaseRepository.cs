@@ -1,20 +1,45 @@
 ﻿using MongoDB.Driver;
+using MongoExample.Data.Interfaces;
+using MongoExample.Data.Interfaces.Connections;
+using MongoExample.Data.Repositories.Connections;
 using MongoExample.Domain.Models;
-using MongoExample.Infra.CrossCutting.AppSettings;
+using System;
 
 namespace MongoExample.Data.Repositories
 {
-    public class BaseRepository<T> where T : BaseModel 
+    public class BaseRepository<T> : IBaseRepository where T : BaseModel 
     {
-        protected readonly IMongoClient _mongoClient;
-        protected readonly IMongoDatabase _mongoDatabase;
-        protected readonly IMongoCollection<T> _collection;
+        protected IRepositoryConnection repositoryConnection { get; private set; }
+        protected readonly string collectionName;
+        protected IMongoCollection<T> collection => repositoryConnection?.GetMongoDatabase()?.GetCollection<T>(collectionName);
 
         public BaseRepository(string collectionName)
         {
-            _mongoClient = new MongoClient(AppSettings.MongoDbConnectionString);
-            _mongoDatabase = _mongoClient.GetDatabase(AppSettings.MongoDbDatabaseName);
-            _collection = _mongoDatabase.GetCollection<T>(collectionName);
+            this.collectionName = collectionName;
+        }
+
+        public IRepositoryConnection GetConnection()
+        {
+            return repositoryConnection;
+        }
+
+        public IRepositoryConnection StartConnection()
+        {
+            try
+            {
+                //Needs Injection
+                repositoryConnection = new RepositoryConnection();
+                return repositoryConnection;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void UseConnection(IRepositoryConnection repositoryConnection)
+        {
+            this.repositoryConnection = repositoryConnection;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Autofac;
+using MongoExample.Data.Interfaces.Customers;
 using MongoExample.Data.Repositories.Customers;
-using MongoExample.Domain.Interfaces.Repository.Customers;
 
 namespace MongoExample.CrossCutting.IoC.Modules
 {

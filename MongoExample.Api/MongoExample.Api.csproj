@@ -7,13 +7,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MongoExample.CrossCutting.DependencyResolver\MongoExample.CrossCutting.DependencyResolver.csproj" />
     <ProjectReference Include="..\MongoExample.CrossCutting.IoC\MongoExample.CrossCutting.IoC.csproj" />
-    <ProjectReference Include="..\MongoExample.Data\MongoExample.Data.csproj" />
+    <ProjectReference Include="..\MongoExample.Domain.Models\MongoExample.Domain.Models.csproj" />
     <ProjectReference Include="..\MongoExample.Domain\MongoExample.Domain.csproj" />
     <ProjectReference Include="..\MongoExample.Infra.CrossCutting.AppSettings\MongoExample.Infra.CrossCutting.AppSettings.csproj" />
   </ItemGroup>

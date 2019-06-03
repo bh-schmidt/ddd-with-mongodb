@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MongoExample.CrossCutting.DependencyResolver\MongoExample.CrossCutting.DependencyResolver.csproj" />
+    <ProjectReference Include="..\MongoExample.Data\MongoExample.Data.csproj" />
+    <ProjectReference Include="..\MongoExample.Domain.Models\MongoExample.Domain.Models.csproj" />
   </ItemGroup>
 
 </Project>
