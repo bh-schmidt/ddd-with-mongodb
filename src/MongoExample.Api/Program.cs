@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using MongoExample.CrossCutting.IoC;
 
 namespace MongoExample.Api
 {
@@ -8,7 +7,6 @@ namespace MongoExample.Api
     {
         public static void Main(string[] args)
         {
-            AutofacConfig.Configure();
             CreateWebHostBuilder(args).Build().Run();            
         }
 

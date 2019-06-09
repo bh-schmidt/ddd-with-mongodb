@@ -1,6 +1,7 @@
 ﻿using MongoDB.Driver;
 using MongoExample.Data.Interfaces.Connections;
 using MongoExample.Infra.CrossCutting.AppSettings;
+using System.Diagnostics;
 
 namespace MongoExample.Data.Repositories.Connections
 {
