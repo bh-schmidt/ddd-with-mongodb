@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using MongoExample.CrossCutting.DependencyResolver;
 using MongoExample.Data.Interfaces;
 using MongoExample.Data.Interfaces.Connections;
 using MongoExample.Data.Repositories.Connections;
@@ -27,8 +28,7 @@ namespace MongoExample.Data.Repositories
         {
             try
             {
-                //Needs Injection
-                repositoryConnection = new RepositoryConnection();
+                repositoryConnection = Factory.Resolve<IRepositoryConnection>();
                 return repositoryConnection;
             }
             catch (Exception e)

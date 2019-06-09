@@ -1,0 +1,23 @@
+{
+  version: '3',
+  services: {
+    mongodb: {
+      image: mongo,
+      ports: [
+        "27017:27017"
+      ],
+      networks: {
+        mongodb-network: {
+          ipv4_address: 172.20.0.2
+        }
+      }
+    }
+  },
+  networks: {
+    mongodb-network: {
+      external: {
+        name: mongodb-network
+      }
+    }
+  }
+}

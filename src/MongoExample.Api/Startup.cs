@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoExample.CrossCutting.IoC;
 using MongoExample.Data.Config;
 using MongoExample.Infra.CrossCutting.AppSettings;
 
@@ -15,6 +16,7 @@ namespace MongoExample.Api
             Configuration = configuration;
 
             AppSettings.Configure(configuration);
+            AutofacConfig.Configure();
             BsonConfig.Configure();
         }
 
