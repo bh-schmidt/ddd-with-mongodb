@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using MongoExample.CrossCutting.DependencyResolver;
 using MongoExample.Data.Interfaces;
 using MongoExample.Domain.Models;
 using System;
@@ -9,7 +10,7 @@ namespace MongoExample.Data.Repositories
 {
     public class BaseCrudRepository<T> : BaseRepository<T>, IBaseCrudRepository<T> where T : BaseModel
     {
-        public BaseCrudRepository(string collectionName) : base(collectionName) { }
+        public BaseCrudRepository(IFactory factory, string collectionName) : base(factory, collectionName) { }
 
         public virtual async Task<T> Add(T model)
         {

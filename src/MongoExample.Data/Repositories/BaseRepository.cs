@@ -10,13 +10,15 @@ namespace MongoExample.Data.Repositories
 {
     public class BaseRepository<T> : IBaseRepository where T : BaseModel 
     {
-        protected IRepositoryConnection repositoryConnection { get; private set; }
+        protected readonly IFactory factory;
         protected readonly string collectionName;
+        protected IRepositoryConnection repositoryConnection { get; private set; }
         protected IMongoCollection<T> collection => repositoryConnection?.GetMongoDatabase()?.GetCollection<T>(collectionName);
 
-        public BaseRepository(string collectionName)
+        public BaseRepository(IFactory factory, string collectionName)
         {
             this.collectionName = collectionName;
+            this.factory = factory;
         }
 
         public IRepositoryConnection GetConnection()
@@ -28,7 +30,7 @@ namespace MongoExample.Data.Repositories
         {
             try
             {
-                repositoryConnection = Factory.Resolve<IRepositoryConnection>();
+                repositoryConnection = factory.Resolve<IRepositoryConnection>();
                 return repositoryConnection;
             }
             catch (Exception e)

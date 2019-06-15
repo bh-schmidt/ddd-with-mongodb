@@ -9,6 +9,13 @@ namespace MongoExample.Domain.Services.Customers
 {
     public class CustomerService : ICustomerService
     {
+        IFactory factory;
+
+        public CustomerService(IFactory factory)
+        {
+            this.factory = factory;
+        }
+
         public async Task Add(Customer customer)
         {
             if (customer == null || string.IsNullOrWhiteSpace(customer.Name))
@@ -16,7 +23,8 @@ namespace MongoExample.Domain.Services.Customers
                 return;
             }
 
-            var repository = Factory.Resolve<ICustomerRepository>();
+            var repository = factory.Resolve<ICustomerRepository>();
+
             repository.StartConnection();
             await repository.Add(customer);
         }
@@ -28,21 +36,26 @@ namespace MongoExample.Domain.Services.Customers
                 return;
             }
 
-            var repository = Factory.Resolve<ICustomerRepository>();
+            var repository = factory.Resolve<ICustomerRepository>();
             repository.StartConnection();
             await repository.Delete(customer);
         }
 
         public async Task<List<Customer>> GetAll()
         {
-            var repository = Factory.Resolve<ICustomerRepository>();
+            var repository = factory.Resolve<ICustomerRepository>();
             repository.StartConnection();
             return await repository.GetAll();
         }
 
         public async Task<Customer> GetBy(string id)
         {
-            var repository = Factory.Resolve<ICustomerRepository>();
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                return null;
+            }
+
+            var repository = factory.Resolve<ICustomerRepository>();
             repository.StartConnection();
             return await repository.GetBy(id);
         }
@@ -54,7 +67,7 @@ namespace MongoExample.Domain.Services.Customers
                 return;
             }
 
-            var repository = Factory.Resolve<ICustomerRepository>();
+            var repository = factory.Resolve<ICustomerRepository>();
             repository.StartConnection();
             await repository.Update(customer);
         }

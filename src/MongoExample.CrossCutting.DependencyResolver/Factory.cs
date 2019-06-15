@@ -2,7 +2,7 @@
 
 namespace MongoExample.CrossCutting.DependencyResolver
 {
-    public static class Factory
+    public class Factory : IFactory
     {
         private static IContainer Container;
 
@@ -11,7 +11,7 @@ namespace MongoExample.CrossCutting.DependencyResolver
             Container = container;
         }
 
-        public static T Resolve<T>()
+        public T Resolve<T>()
         {
             return Container.Resolve<T>();
         }
